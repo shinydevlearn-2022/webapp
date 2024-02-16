@@ -19,7 +19,7 @@ pipeline {
     }
     stage ('Deploy-To-Tomcat') {
       steps {
-        sh 'scp -o StrictHostKeyChecking=no target/*.war shiny@127.0.1.1:/prod/apache-tomcat-9.0.85/webapps/webapp.war'
+        sh 'scp -o StrictHostKeyChecking=no target/*.war shiny@127.0.0.1:/prod/apache-tomcat-9.0.85/webapps/webapp.war'
       }
     }
   }
