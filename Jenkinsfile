@@ -19,7 +19,7 @@ pipeline {
     }
     stage ('Deploy-To-Tomcat') {
       steps {
-        sh 'cp target/*.war ubuntu@127.0.0.1:/home/shiny/prod/apache-tomcat-9.0.85/webapps/webapp.war'
+        sh 'copy target/*.war shiny@127.0.0.1:/home/shiny/prod/apache-tomcat-9.0.85/webapps/webapp.war'
       }
     }
   }
